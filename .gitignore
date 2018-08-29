@@ -1,0 +1,9 @@
+target/
+derby.log
+.project
+.classpath
+.git/
+.settings
+.idea/
+.iml
+node_modules/
