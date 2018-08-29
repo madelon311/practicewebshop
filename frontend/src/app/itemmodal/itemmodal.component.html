@@ -1,0 +1,20 @@
+<div class="backdrop" [ngStyle]="{'display': display}"></div>
+<div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display': display}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">{{ item?.name }} added to shopping cart!</h3>
+          <button type="button" class="close" aria-label="Close" (click)="onItemAdded()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <a [routerLink]="['/shoppingcart']" (click)="onItemAdded()" style="margin-right: 20px;"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-shopping-cart"></span> Go to Shopping Cart</button></a>
+          <a [routerLink]="['/']" (click)="onItemAdded()"><button type="button" class="btn btn-default btn-sm">Continue shopping</button></a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="onItemAdded()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
